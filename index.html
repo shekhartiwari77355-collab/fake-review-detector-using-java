@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Review Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fake Review Detector</h1>
+            <p>Enter a product review and check whether it looks genuine or suspicious.</p>
+        </header>
+
+        <main class="card">
+            <label for="review">Enter Review</label>
+            <textarea id="review" placeholder="Example: This product is amazing! I have been using it for two weeks..."></textarea>
+
+            <button id="analyzeBtn">Analyze Review</button>
+
+            <div id="result" class="result hidden">
+                <h2 id="label"></h2>
+
+                <div class="score-box">
+                    <span>Fake Probability Score</span>
+                    <strong id="score">0%</strong>
+                </div>
+
+                <div class="bar">
+                    <div id="barFill"></div>
+                </div>
+
+                <p id="reason"></p>
+            </div>
+        </main>
+
+        <section class="info">
+            <h2>How it works</h2>
+            <div class="rules">
+                <div>Promotional phrases</div>
+                <div>Too many ! marks</div>
+                <div>Repeated characters</div>
+                <div>Very short review</div>
+                <div>Too many CAPITAL letters</div>
+                <div>Repeated words</div>
+            </div>
+            <p><b>Note:</b> This is a simple educational rule-based detector. It does not guarantee that a review is actually fake.</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
